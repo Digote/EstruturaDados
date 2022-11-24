@@ -1,0 +1,1 @@
+"Digite o elemento da posicao %d: ", i
