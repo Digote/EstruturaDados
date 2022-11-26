@@ -12,6 +12,5 @@ int main() {
         printf(" %d + %d = %d", vet1[i], vet2[i], vet3[i]);
         printf("\n\n");
     }
-
     return 0;
 }
