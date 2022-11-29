@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*   Aula 112: Faça um programa que some o conteúdo de dois vetores de tamanho 25 e armazene o resultado em um terceiro vetor. Imprima os três vetores na tela.
+*/
+
 int main() {
 
     int i, vet1[25], vet2[25], vet3[25];
