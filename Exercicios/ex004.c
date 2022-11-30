@@ -18,7 +18,7 @@ int main() {
 
     float valorItem[2], valorTotal[2] = {0,0}, comissao = 0, salario = 1100;
 
-    int qtdVendida[2], i, totalVendas = 0;
+    int qtdVendida[2], i, totalVendas = 0, maisVendido = 0;
 
 
 
@@ -28,7 +28,7 @@ int main() {
     }
 
     for(i = 0; i < 2; i++){
-        printf("\nA quantidade vendida do produto %d foi de %d e o valor do item e %2.f\n", i, qtdVendida[i], valorItem[i]);
+        printf("\nA quantidade vendida do produto %d foi de %d e o valor do item e R$%2.f\n", i, qtdVendida[i], valorItem[i]);
         valorTotal[i] += (qtdVendida[i] * valorItem[i]);
         totalVendas += qtdVendida[i];
         comissao = qtdVendida[i] * valorItem[i];
@@ -37,11 +37,23 @@ int main() {
         comissao = comissao * 0.5;
 
     for(i = 0; i < 2; i++){
-        printf("\nO valor total vendido do item %d e de %2.f\n", i, valorTotal[i]);
+        printf("\nO valor total vendido do item %d e de R$%2.f\n", i, valorTotal[i]);
     }
 
+
         printf("\n O total de vendas foi de %d itens\n", totalVendas);
-        printf("\n A comissao que sera paga ficou em %2.f", comissao);
-        
+        printf("\n A comissao que sera paga ficou em R$%2.f\n", comissao);
+
+
+    for(i = 0; i < 2; i++){
+        if(qtdVendida[i] > maisVendido)
+        maisVendido = qtdVendida[i];
+    }
+
+    for(i = 0; i < 2; i++){
+        if(qtdVendida[i] == maisVendido){
+            printf("\nPosicao: %d\tValor R$%2.f\n", i, valorItem[i]);
+        }
+    }
     return 0;
 }
