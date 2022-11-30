@@ -14,46 +14,34 @@ empatados).
 
 */
 
-
 int main() {
 
-    float valorObjeto[2], valorTotal[2], salarioComissao, totalVendaProduto[2], totalVenda;
-    float salario = 1100;
-    int quantidadeVendida[2], i, maior, menor;
+    float valorItem[2], valorTotal[2] = {0,0}, comissao = 0, salario = 1100;
+
+    int qtdVendida[2], i, totalVendas = 0;
+
+
 
     for(i = 0; i < 2; i++){
-        printf("\nQual o valor do objeto %d e qual foi a quantidade vendida: %d ", i, i);
-        scanf("%2f %d", &valorObjeto[i], &quantidadeVendida[i]); 
+        printf("\nDigite o valor item e depois a quantidade vendida: ");
+        scanf("%f%d", &valorItem[i], &qtdVendida[i]);
     }
 
     for(i = 0; i < 2; i++){
-        printf("\n A quantidade vendida do produto %d e = %d", i, quantidadeVendida[i]);
-        printf("\nO valor unitario do produto %d e = %2.f\n", i, valorObjeto[i]);
-        totalVendaProduto[i] = quantidadeVendida[i] * valorObjeto[i];
-        printf("O valor total vendido do objeto  %d = %2.f\n", i, totalVendaProduto[i]);
-        totalVenda = totalVendaProduto[i] + totalVenda;
-        salario = (totalVenda * 0.5) + salario;
+        printf("\nA quantidade vendida do produto %d foi de %d e o valor do item e %2.f\n", i, qtdVendida[i], valorItem[i]);
+        valorTotal[i] += (qtdVendida[i] * valorItem[i]);
+        totalVendas += qtdVendida[i];
+        comissao = qtdVendida[i] * valorItem[i];
     }
 
-        printf("\nVoce teve um total de vendas de: \n%2.f", totalVenda);
-        printf("\nO seu salario vai ser de: \n%2.f", salario);
+        comissao = comissao * 0.5;
 
-        for(i = 0; i < 2; i++){
-            if(i == 0){
-            menor = quantidadeVendida[i];
-            maior = quantidadeVendida[i];
-            if(quantidadeVendida[i] > maior){
-                maior = quantidadeVendida[i];
-            }
-            else{
-                if(quantidadeVendida[i] < menor) {
-                    menor = quantidadeVendida[i];
-                }
-            }
-            }
-        }
+    for(i = 0; i < 2; i++){
+        printf("\nO valor total vendido do item %d e de %2.f\n", i, valorTotal[i]);
+    }
 
-        printf("\nO maior valor foi: %d", maior);
-
+        printf("\n O total de vendas foi de %d itens\n", totalVendas);
+        printf("\n A comissao que sera paga ficou em %2.f", comissao);
+        
     return 0;
 }
