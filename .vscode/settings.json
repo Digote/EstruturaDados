@@ -2,7 +2,8 @@
     "cSpell.language": "en,pt-BR",
     "files.associations": {
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "ex008.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
