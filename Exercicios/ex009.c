@@ -36,7 +36,7 @@ int main() {
     printf("\n");
     
     for(l = 0; l < 5; l++){
-        printf("\nsoma vetorA de pocicao %d = %d ", l,vetorA[l]);
+        printf("\nsoma vetorA de lugar %d = %d ", l,vetorA[l]);
     }
 
         for(c = 0; c < 10; c++){
@@ -51,7 +51,7 @@ int main() {
     printf("\n");
 
     for(l = 0; l < 10; l++){
-        printf("\nsoma vetorB de pocicao %d = %d ", l,vetorB[l]);
+        printf("\nsoma vetorB de lugar %d = %d ", l,vetorB[l]);
     }
 
     return 0;
