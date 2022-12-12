@@ -23,7 +23,17 @@ int main(){
 
         for(l = 0; l < 5; l++){
             for(c = 0; c < 4; c++){
+                matrizB[c][l] = matrizA[l][c];
                 printf("%2d ", matrizA[l][c]);
+        }
+                printf("\n");
+    }
+
+    printf("\n\n Matriz transposta:\n");
+
+        for(l = 0; l < 4; l++){
+            for(c = 0; c < 5; c++){
+                printf("%2d ", matrizB[l][c]);
         }
                 printf("\n");
     }
