@@ -8,9 +8,9 @@
 
 int main(){
 
-    char palavras[] = {"Oi. Vamos aprender a programar com a linguagem C?"};
+    char palavras[100] = {"Oi. Vamos aprender a programar com a linguagem C?"};
 
-    printf("%s", palavras);
+    printf("%s\n\n", palavras);
 
     return 0;
 }
